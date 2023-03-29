@@ -28,7 +28,7 @@
                 <input type="text" name="pass" placeholder="Escriba su contraseña" required>
             </div>
             
-            <button type="submit">Inicar Sesion</button>
+            <button type="submit" >Inicar Sesion</button>
         </form>
 </div>
 

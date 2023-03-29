@@ -17,9 +17,9 @@ $PERSONAL = "SELECT * FROM PERSONAL";
     <body>
 
         <div class="container-add">
-            <h2 class="container__title">REGISTRAR OPERADOR</h2>
+            <h2 class="container__title">REGISTRAR ALUMNO</h2>
             <form action ="insertar.php" method="post" class="container__form">
-                <lable class="container__label">ID NOMINA:</lable>
+                <lable class="container__label">MATRICULA:</lable>
                 <input name="id_nomina" type="text" class="container__input">
                 <lable class="container__label">APELLIDO PATERNO:</lable>
                 <input name="apellido_paterno" type="text" class="container__input">
@@ -27,10 +27,9 @@ $PERSONAL = "SELECT * FROM PERSONAL";
                 <input name="apellido_materno" type="text" class="container__input">
                 <lable class="container__label">NOMBRE(S):</lable>
                 <input name="nombre" type="text" class="container__input">
-                <lable class="container__label">ID LICENCIA:</lable>
+                <lable class="container__label">CURP:</lable>
                 <input name="id_licencia" type="text" class="container__input">
-                <lable class="container__label">VENCIMIENTO LICENCIA:</lable>
-                <input name="vencimiento" type="date" class="container__input">
+                
                 <input class="container__submit" type="submit" value ="Registrar">
             </form>
         </div>
@@ -38,13 +37,13 @@ $PERSONAL = "SELECT * FROM PERSONAL";
 
         <div class="container-table"> 
             <!--Columnas-->
-            <div class="table__title">DATOS DEL PERSONAL<a href="edicion.php" class="title_edit">Edición</a></div>
-            <div class="table__header">ID NOMINA</div>
+            <div class="table__title">DATOS DEL ALUMNO<a href="edicion.php" class="title_edit">Edición</a></div>
+            <div class="table__header">MATRICULA</div>
             <div class="table__header">APELLIDO PATERNO</div>
             <div class="table__header">APELLIDO MATERNO</div>
             <div class="table__header">NOMBRE(S)</div>
             <div class="table__header">ID LICENCIA</div>
-            <div class="table__header">VENCIMIENTO LICENCIA</div>
+            <div class="table__header">FECHA DE REGISTRO</div>
             
             <!--Datos-->
             <?php $resultado = mysqli_query($conexion,$PERSONAL);

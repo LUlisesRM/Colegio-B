@@ -6,7 +6,7 @@ $correo = $_POST['correo'];
 $pass = $_POST['pass'];
 
 
-$q = "SELECT COUNT(*) AS id_alumno FROM alumnos where correo_inst = '$correo' and pass = '$pass'";
+$q = "SELECT COUNT(*) AS id_alumno FROM alumnos where correo_institucional = '$correo' and pass = '$pass'";
 
 $consulta = mysqli_query($conexion, $q);
 
