@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, 
-    initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilo_login.css">
-    <title>Login</title>
+    <title>Login con session</title>
 </head>
 
 <body>
 <div>
     <header>
-
+        
     </header>
 </div>
     
 <div  >
-        <form method="POST" action="log/loguear.php" class="login">
+        <form method="POST" action="login.php" class="login">
+                <h3 color: red>LOGIN ERROR</h3>
             <div class="form-group">
                 <label>Correo Institucional</label><br>
                 <input type="text" name="correo" placeholder="Escriba su correo" required>
