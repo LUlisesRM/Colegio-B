@@ -37,6 +37,6 @@ $sql="SELECT * FROM alumnos";
 </table>
 <br>
 <button><a href="edicion.php">Editar</a></button>
-<button><a href="regristrar.php">Regristrar</a></button>
+<button><a href="registrar.php">Regristrar</a></button>
 <br>
 <button><a href='../salir.php'> SALIR</a></button>

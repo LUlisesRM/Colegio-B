@@ -3,20 +3,26 @@ include("index.php");
 
 echo "<h2>REGISTRAR ALUMNO</h2>
             <form action ='insertar.php' method='post'>
-                <lable>ID NOMINA:</lable>
-                <input name='id_nomina' type='text'>
+                <lable>GRADO:</lable>
+                <input name='grado' type='text'>
+                <lable>MATRICULA:</lable>
+                <input name='matricula' type='int'>
                 <lable>APELLIDO PATERNO:</lable>
                 <input name='apellido_paterno' type='text'>
                 <lable>APELLIDO MATERNO:</lable>
                 <input name='apellido_materno' type='text'>
-                <lable>NOMBRE(S):</lable>
+                <lable>NOMBRE:</lable>
                 <input name='nombre' type='text'>
-                <lable>ID LICENCIA:</lable>
-                <input name='id_licencia' type='text'>
-                <lable>VENCIMIENTO LICENCIA:</lable>
-                <input name='vencimiento' type='date'>
+                <lable>CURP:</lable>
+                <input name='CURP' type='text'>
+                <lable>CORREO INSTITUCIONAL:</lable>
+                <input name='correo_institucional' type='text'>
+                <lable>CONTRASEÑA:</lable>
+                <input name='pass' type='text'>
                 <input type='submit' value ='Registrar'>
-            </form> ";
+                 
+            </form> 
+            <button><a href='index.php'>Cancelar</a></button>";
 
 
 ?>

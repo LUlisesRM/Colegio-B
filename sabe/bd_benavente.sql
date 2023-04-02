@@ -17,7 +17,7 @@ nombre text(50) not null,
 CURP  text (18) not null,
 correo_institucional text not null,
 pass varchar (8) not null,
-permisos int (1) not null,
+permisos varchar (3) not null default 001,
 fecha_registro  datetime not null default current_timestamp
  ) engine=Innodb default charset=utf8;
 
