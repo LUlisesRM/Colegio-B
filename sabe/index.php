@@ -16,6 +16,11 @@
 
     </header>
 </div>
+<div>
+    <a href="../inicio/index.php">
+        <img src="../inicio/media/escudo.jpg" alt="ESCUDO" width = 100px padding = 30px>
+    </a>
+</div>
     
 <div  >
         <form method="POST" action="login.php" class="login">
@@ -25,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label>Contraseña</label><br>
-                <input type="text" name="pass" placeholder="Escriba su contraseña" required>
+                <input type="password" name="pass" placeholder="Escriba su contraseña" required>
             </div>
             
             <button type="submit" >Inicar Sesion</button>

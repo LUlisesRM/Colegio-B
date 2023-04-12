@@ -13,7 +13,7 @@
         <header class="encabezado">
             <div>
                 <nav class="celda_encabezado">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="media/escudo.jpg" alt="ESCUDO">
                     </a>
 
