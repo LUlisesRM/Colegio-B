@@ -21,19 +21,19 @@
                         <div class="tabla_encabezado">
                             <ul class="lista_encabezado">
                                 <li>
-                                    <a href="Alumnos.html" class="columna_encabezado">INICIO</a>
+                                    <a href="index.php" class="columna_encabezado">INICIO</a>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="columna_encabezado">NOSOTROS</a>
+                                    <a href="../nosotros/nosotros.php" class="columna_encabezado">NOSOTROS</a>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="columna_encabezado">OFERTA ACADEMICA</a>
+                                    <a href="../oferta-academica/oferta-academica.php" class="columna_encabezado">OFERTA ACADEMICA</a>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="columna_encabezado">INSCRIPCIONES</a>
+                                    <a href="../inscripciones/inscripciones.php" class="columna_encabezado">INSCRIPCIONES</a>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="columna_encabezado">PADRES DE FAMILIA</a>
+                                    <a href="../padres-de-familia/padres-de-familia.php" class="columna_encabezado">PADRES DE FAMILIA</a>
                                 </li>
                                 <li>
                                     <a href="../sabe/index.php" class="columna_encabezado">SABE</a>

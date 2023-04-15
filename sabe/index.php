@@ -10,31 +10,33 @@
     <title>Login</title>
 </head>
 
-<body>
+<body class=fondo>
 <div>
     <header>
-
     </header>
 </div>
+
 <div>
     <a href="../inicio/index.php">
         <img src="../inicio/media/escudo.jpg" alt="ESCUDO" width = 100px padding = 30px>
     </a>
 </div>
     
-<div  >
-        <form method="POST" action="login.php" class="login">
-            <div class="form-group">
-                <label>Correo Institucional</label><br>
-                <input type="text" name="correo" placeholder="Escriba su correo" required>
-            </div>
-            <div class="form-group">
-                <label>Contraseña</label><br>
-                <input type="password" name="pass" placeholder="Escriba su contraseña" required>
-            </div>
-            
-            <button type="submit" >Inicar Sesion</button>
-        </form>
+<div>
+    <form method="POST" action="login.php" class="login">
+        <div class="form-group">
+            <label>Correo Institucional</label><br>
+            <input type="text" name="correo" placeholder="Escriba su correo" required size=35>
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label><br>
+            <input type="password" name="pass" placeholder="Escriba su contraseña" required size=35>
+        </div><br>
+        <div align="center">
+        <button type="submit">Inicar Sesion</button>
+        </div>
+        
+    </form>
 </div>
 
 </body>

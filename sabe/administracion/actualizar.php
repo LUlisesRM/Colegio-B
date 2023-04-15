@@ -1,6 +1,7 @@
 <?php
 include ("../conexion.php");
 
+
 $id = $_GET["id"];
 $sql = "SELECT * FROM alumnos WHERE id_alumno = '$id'";
 

@@ -1,6 +1,7 @@
 <?php
 include("index.php");
 
+
 echo "<h2>REGISTRAR ALUMNO</h2>
             <form action ='insertar.php' method='post'>
                 <lable>GRADO:</lable>

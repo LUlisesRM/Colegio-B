@@ -1,6 +1,7 @@
 <?php
 include ("../conexion.php");
 
+
 $grado = $_POST['grado'];
 $matricula = $_POST['matricula'];
 $apellido_paterno = $_POST['apellido_paterno'];

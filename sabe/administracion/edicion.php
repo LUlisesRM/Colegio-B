@@ -1,6 +1,7 @@
 <?php
 include ("../conexion.php");
 
+
 //consulta
 $sql="SELECT * FROM alumnos";
 

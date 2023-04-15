@@ -1,21 +1,33 @@
 body,html{
-    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif,BlinkMacSystemFont,"Segoe UI",Roboto,
+    "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji",
+    "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
     padding: 0;
     width: 100%;
+    line-height: 1.5;
     position: relative;
+}
+
+.fondo{
+    background-color: #486FDE;
+    background-attachment: fixed;
+    
 }
 
 
 
 .login{
+    background-color: white;
     border: 2px solid #E1E1E1;
     border-radius: 10px;
     padding: 17px;
-    width: 250px;
+    width: 280px;
     position: absolute;
     top: 50%;
     left: 50%;
-     transform: translate(-50%,100%);
+    transform: translate(-50%,100%);
 }
 
 @media(max-width: 400px){
