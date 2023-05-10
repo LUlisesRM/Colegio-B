@@ -11,33 +11,27 @@
 </head>
 
 <body class=fondo>
-<div>
-    <header>
-    </header>
-</div>
 
-<div>
-    <a href="../inicio/index.php">
-        <img src="../inicio/media/escudo.jpg" alt="ESCUDO" width = 100px padding = 30px>
-    </a>
-</div>
-    
-<div>
-    <form method="POST" action="login.php" class="login">
-        <div class="form-group">
-            <label>Correo Institucional</label><br>
-            <input type="text" name="correo" placeholder="Escriba su correo" required size=35>
-        </div>
-        <div class="form-group">
-            <label>Contraseña</label><br>
-            <input type="password" name="pass" placeholder="Escriba su contraseña" required size=35>
-        </div><br>
-        <div align="center">
-        <button type="submit">Inicar Sesion</button>
-        </div>
-        
+    <div>
+        <form method="POST" action="login.php" class="login">
+            <div>
+                <a href="../inicio/index.php">
+                <img src="media/escudo_colegio.png" alt="LOGO CITEMSA" width="60px" align="left">
+                <img src="media/50_aniversario.jpg" alt="LOGO CITEMSA" width="85px" align="right"></a> <br><br>
+            </div><br>
+            <div>
+                <label>Correo Institucional</label><br>
+                <input name="institucional" placeholder="Escriba su correo institucional" required> <br>
+                <label>Contraseña</label><br>
+                <input type="password" name="pass" placeholder="Escriba su contraseña" required>
+            </div><br>
+            <div align="center">
+                <button type="submit">Inicar Sesion</button>
+            </div>
+    </div>
+
     </form>
-</div>
+    </div>
 
 </body>
 

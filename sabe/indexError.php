@@ -9,28 +9,27 @@
     <title>Login con session</title>
 </head>
 
-<body>
-<div>
-    <header>
-        
-    </header>
-</div>
-    
-<div  >
+<body class=fondo>
+    <div>
         <form method="POST" action="login.php" class="login">
-                <h3 color: red>LOGIN ERROR</h3>
-            <div class="form-group">
+            <div>
+                <a href="../inicio/index.php">
+                    <img src="media/escudo_colegio.png" alt="LOGO CITEMSA" width="60px" align="left">
+                    <img src="media/50_aniversario.jpg" alt="LOGO CITEMSA" width="85px" align="right"></a> <br><br>
+            </div><br>
+            <div>
                 <label>Correo Institucional</label><br>
-                <input type="text" name="correo" placeholder="Escriba su correo" required>
-            </div>
-            <div class="form-group">
+                <input name="institucional" placeholder="Escriba su correo institucional" required> <br>
                 <label>Contraseña</label><br>
-                <input type="text" name="pass" placeholder="Escriba su contraseña" required>
+                <input type="password" name="pass" placeholder="Escriba su contraseña" required>
+            </div><br>
+            <div align="center">
+                <button type="submit">Inicar Sesion</button>
             </div>
-            
-            <button type="submit" >Inicar Sesion</button>
-        </form>
-</div>
+    </div>
+
+    </form>
+    </div>
 
 </body>
 
