@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../estilo_saco.css">
-    <title>SACO</title>
+    <title>SABE</title>
 
 </head>
 
@@ -16,17 +16,17 @@
         <header>
             <div class="encabezado">
                 <div class="img-left-enc">
-                    <img src="../../../media/LOGO_MBL5.png" alt="LOGO CITEMSA" width="150px">
+                    <img src="../../../media/escudo_colegio.png" alt="LOGO CITEMSA" width="80px">
                 </div>
 
                 <div class="text-enc">
-                    CORREDOR INTEGRAL DE TRANSPORTE EDUARDO MOLINA CITEMSA S.A. DE C.V.
+                    COLEGIO FRAY TORIBIO DE BENAVENTE
                     <br>
-                    SISTEMA DE ADMINISTRACION Y CONTROL DE OPERACIONES
+                    SISTEMA DE ADMINISTRACION ESCOLAR DEL COLEGIO BENAVENTE
                 </div>
 
                 <div class="img-right-enc">
-                    <img src="../../../media/logo_citemsa.png" alt="LOGO CITEMSA" width="130px">
+                    <img src="../../../media/50_aniversario.jpg" alt="LOGO CITEMSA" width="110px">
                 </div>
             </div>
         </header>
@@ -37,26 +37,26 @@
                 <div class=sidebar>
                     <h2>Menú</h2>
                     <ul>
-                        <li><a href='../../index.php'>INICIO</a></li>
-                        <li><a href='../../operaciones/index.php'>OPERACIONES</a></li>
-                        <li><a href='../../administracion/index.php'>ADMINISTRACION</a></li>
-                        <li><a href='../index.php'>RECURSOS HUMANOS</a>
+                        <li class=menu__item><a href='../../../index.php'>INICIO</a></li>
+                        <li><a href='../index.php'>ADMINISTRACION</a>
                             <ul class=submenu>
-                                <li class=menu__item><a href="index.php" class=menu__link>Base de Datos</a></li>
+                                <li class=menu__item><a href="index.php" class=menu__link>ALUMNOS</a></li>
                             </ul>
                         </li>
+                        <li><a href='../../maestros/index.php'>MAESTROS</a></li>
                         <li><a href='../../../salir.php'>SALIR</a></li>
+
                     </ul>
                 </div>
             </nav>
 
             <article>
 
-                <h1>BASE DE DATOS OPERADORES</h1>
+                <h1>ALUMNOS</h1>
 
                 <table border="2px">
                     <tr>
-                        <th>CREDENCIAL DE METROBUS</th>
+                        <th>MATRICULA</th>
                         <th>NOMBRE</th>
                     </tr>
 
@@ -64,7 +64,7 @@
                     include("../../../conexion.php");
 
                     //consulta
-                    $sql = "SELECT * FROM operadores";
+                    $sql = "SELECT * FROM alumnos";
 
                     $consulta = $conexion->query($sql);
 
@@ -75,7 +75,7 @@
                         while ($row = mysqli_fetch_assoc($consulta)) {
 
                             echo "<tr>";
-                            echo "<td><a href= mostrar.php?id=" . $row['id_operador'] . ">" . $row['credencial_mb'] . "</a></td>";
+                            echo "<td><a href= mostrar.php?id=" . $row['id_alumno'] . ">" . $row['matricula'] . "</a></td>";
                             echo "<td>" . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . ' ' . $row['nombre'] . "</td>";
                             echo "</tr>";
                         }
@@ -98,7 +98,7 @@
             include("../../../conexion.php");
 
             $id = $_GET["id"];
-            $sql = "SELECT * FROM operadores WHERE id_operador = '$id'";
+            $sql = "SELECT * FROM alumnos WHERE id_alumno = '$id'";
             $consulta = mysqli_query($conexion, $sql);
             $count = mysqli_num_rows($consulta);
 
@@ -106,27 +106,25 @@
 
 
                 while ($row = mysqli_fetch_assoc($consulta)) {
-                    echo "<div><h2>DATOS DEL OPERADOR</h2></div>";
-                    echo "<type='hidden'name = 'id' value=" . $row['id_operador'] . ">";
+                    echo "<div><h2>DATOS DEL ALUMNO</h2></div>";
+                    echo "<type='hidden'name = 'id' value=" . $row['id_alumno'] . ">";
                     echo "<div><table class=tabla_modal>";
                     echo "<tr>";
                     ?>
-            
-                    <td><img height = '300px' name = 'imagen' src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
-                    
+
+                    <td><img height='300px' name='imagen'
+                            src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
+
                     <?php
-                    echo "<td> NOMBRE: ".$row['nombre']. ' '.$row['apellido_paterno'].' '.$row['apellido_materno']. "<br><br>";
-                    echo "CREDENCIAL METROBUS: " .$row['credencial_mb']. "<br><br>";
-                    echo "NOMINA: ".$row['nomina']. "<br><br>";
-                    echo "ESTATUS: ".$row['estatus']. "<br><br>";
-                    echo "FECHA DE CONTRATO: ".$row['fecha_contrato']. "<br><br>";
-                    echo "ID DE LICENCIA: ".$row['id_licencia']. "<br><br>";
-                    echo "VENCIMIENTO DE LICENCIA: ".$row['vencimiento_licencia']. "<br><br>";
-                    echo "CURP: ".$row['curp']. "<br><br>";
-                    echo "NUMERO DE SEGURO SOCIAL: ".$row['nss']. "</td></tr>";
+                    echo "<td> NOMBRE: " . $row['nombre'] . ' ' . $row['apellido_paterno'] . ' ' . $row['apellido_materno'] . "<br><br>";
+                    echo "MATRICULA: " . $row['matricula'] . "<br><br>";
+                    echo "ESTATUS: " . $row['estatus'] . "<br><br>";
+                    echo "FECHA DE INGRESO: " . $row['fecha_alta'] . "<br><br>";
+                    echo "CURP: " . $row['curp'] . "<br><br>";
+                    echo "NUMERO DE SEGURO SOCIAL: " . $row['nss'] . "</td></tr>";
                     echo "</table>";
-                    echo "<button><a href= editar.php?id=" . $row['id_operador'] . ">EDITAR</a></button> ";
-                    echo "<button><a href= eliminar.php?id=" . $row['id_operador'] . ">ELIMINAR</a></button> <button><a href='index.php'>REGRESAR</a></button></div>";
+                    echo "<button><a href= editar.php?id=" . $row['id_alumno'] . ">EDITAR</a></button> ";
+                    echo "<button><a href= eliminar.php?id=" . $row['id_alumno'] . ">ELIMINAR</a></button> <button><a href='index.php'>REGRESAR</a></button></div>";
                     echo "";
                 }
             } else {

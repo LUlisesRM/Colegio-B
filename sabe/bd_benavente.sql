@@ -65,8 +65,8 @@ add primary key (id_padmon);
 
 INSERT INTO padmon (nomina,apellido_paterno,apellido_materno,nombre,estatus,
 contraseña,curp,homoclave,nss,telefono,correo_personal,correo_institucional,codigo_postal)
-VALUES ('0001','REYES','MILAN','LUIS ULISES', 'ACTIVO','2013-11-05','C525525','2025-01-13',
-'PEQM710426HDFDRR05','PC0','05147102346','5550080107','07420');
+VALUES ('0001','REYES','MILAN','LUIS ULISES', 'ACTIVO','Milan2015:','REML00000000000000','111',
+'10000000000','5500000000','lurm.m@','ulisesmilan20@benavente-colegio.edu.mx','07420');
 
 
 

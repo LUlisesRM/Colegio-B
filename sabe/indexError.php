@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilo_login.css">
-    <title>Login con session</title>
+    <title>Login</title>
 </head>
 
 <body class=fondo>
@@ -14,9 +14,10 @@
         <form method="POST" action="login.php" class="login">
             <div>
                 <a href="../inicio/index.php">
-                    <img src="media/escudo_colegio.png" alt="LOGO CITEMSA" width="60px" align="left">
-                    <img src="media/50_aniversario.jpg" alt="LOGO CITEMSA" width="85px" align="right"></a> <br><br>
+                    <img src="media/escudo_colegio.png" alt="LOGO COLEGIO" width="60px" align="left">
+                    <img src="media/50_aniversario.jpg" alt="LOGO ANIVERSARIO" width="85px" align="right"></a> <br><br>
             </div><br>
+            <div><h4>contraseña o usuario incorrecto</h4></div>
             <div>
                 <label>Correo Institucional</label><br>
                 <input name="institucional" placeholder="Escriba su correo institucional" required> <br>

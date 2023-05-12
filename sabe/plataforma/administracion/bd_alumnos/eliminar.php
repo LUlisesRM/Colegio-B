@@ -2,7 +2,7 @@
 include "../../../conexion.php";
 $id = $_GET['id'];
 
-$sql="DELETE FROM operadores WHERE id_operador = '$id'";
+$sql="DELETE FROM alumnos WHERE id_alumno = '$id'";
 
 
 

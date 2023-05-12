@@ -16,8 +16,8 @@
         <form method="POST" action="login.php" class="login">
             <div>
                 <a href="../inicio/index.php">
-                <img src="media/escudo_colegio.png" alt="LOGO CITEMSA" width="60px" align="left">
-                <img src="media/50_aniversario.jpg" alt="LOGO CITEMSA" width="85px" align="right"></a> <br><br>
+                <img src="media/escudo_colegio.png" alt="LOGO COLEGIO" width="60px" align="left">
+                <img src="media/50_aniversario.jpg" alt="LOGO ANIVERSARIO" width="85px" align="right"></a> <br><br>
             </div><br>
             <div>
                 <label>Correo Institucional</label><br>

@@ -2,23 +2,21 @@
 include ("../../../conexion.php");
 
 $id = $_POST["id"];
-$credencial = $_POST['credencial_mb'];
-$nomina = $_POST['nomina'];
+$matricula = $_POST['matricula'];
 $paterno = $_POST['apellido_paterno'];
 $materno = $_POST['apellido_materno'];
 $nombre = $_POST['nombre'];
 $status = $_POST['estatus'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_licencia = $_POST['vencimiento_licencia'];
+$alta = $_POST['fecha_alta'];
 $curp = $_POST['curp'];
 $seguro = $_POST['nss'];
 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
 
 //actualizar datos
-$sql = "UPDATE operadores SET credencial_mb = '$credencial', nomina = '$nomina', apellido_paterno ='$paterno', 
-apellido_materno = '$materno', nombre = '$nombre', estatus = '$status', id_licencia = '$id_licencia',
-vencimiento_licencia = '$fecha_licencia', curp = '$curp', nss = '$seguro', imagen = '$imagen' WHERE id_operador = '$id' ";
+$sql = "UPDATE alumnos SET matricula = '$matricula', apellido_paterno ='$paterno', 
+apellido_materno = '$materno', nombre = '$nombre', estatus = '$status',
+fecha_alta = '$alta', curp = '$curp', nss = '$seguro', imagen = '$imagen' WHERE id_alumno = '$id' ";
 
 $consulta = mysqli_query($conexion, $sql);
 

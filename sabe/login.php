@@ -2,11 +2,11 @@
 require 'conexion.php';
 session_start();
 
-$credencial = $_POST['credencial'];
+$correo_ins = $_POST['institucional'];
 $pass = $_POST['pass'];
 
 
-$sql = "SELECT COUNT(*) AS id_padmon FROM padmon where credencial_mb = '$credencial' and contraseña = '$pass'";
+$sql = "SELECT COUNT(*) AS id_padmon FROM padmon where correo_institucional = '$correo_ins' and contraseña = '$pass'";
 
 $consulta = mysqli_query($conexion, $sql);
 
@@ -16,9 +16,9 @@ if ($array['id_padmon'] > 0) {
 
     
     // en la variable session se guarda el numero de cuenta esto para poder acarrearla
-    $_SESSION['credencial_mb'] = $credencial;
+    $_SESSION['institucional'] = $correo_ins;
 
-    header("location: Plataforma_citemsa/index.php ");
+    header("location: plataforma/index.php ");
 
 } else {
 

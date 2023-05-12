@@ -2,8 +2,8 @@
 
 $host_db = "127.0.0.1:3306";
 $user_db = "root";
-$pass_db = "3271";
-$db_name = "bd_citemsa";
+$pass_db = "1293";
+$db_name = "bd_benavente";
 
 
 
