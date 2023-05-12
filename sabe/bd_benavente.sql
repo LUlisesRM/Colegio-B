@@ -6,30 +6,42 @@ use  bd_benavente;
 
 -- creamos la tabla
 
-
-CREATE TABLE alumnos(
-id_alumno int(10) not null,
+CREATE TABLE tutores(
+id_tutor int(10) primary key auto_increment not null,
 imagen longblob,
-matricula int(10) not null auto_increment,
 
 apellido_paterno text not null,
 apellido_materno  text not null,
 nombre text not null,
-estatus  text not null,
+
+curp varchar (18) not null,
+telefono varchar (10) not null,
+correo_personal text,
+codigo_postal varchar(5)not null
+)engine=Innodb default charset=utf8;
+
+CREATE TABLE alumnos(
+id_alumno int(10) primary key not null auto_increment,
+imagen longblob,
+matricula int not null,
+clave_tutor int,
+
+apellido_paterno text not null,
+apellido_materno  text not null,
+nombre text not null,
+estatus text not null,
 fecha_alta date,
 fecha_baja date,
-contraseña varchar (20) not null,
+correo_institucional text not null,
+contraseña text not null,
 
 curp varchar (18) not null,
 nss varchar (11) not null,
-telefono_padre varchar (10) not null,
-correo_personal text,
-correo_institucional text not null,
-codigo_postal varchar(5)not null,
 permisos varchar (3) not null default 001,
-fecha_registro  datetime not null default current_timestamp
- ) engine=Innodb default charset=utf8;
-
+fecha_registro  datetime not null default current_timestamp,
+foreign key (clave_tutor) references tutores(id_tutor)
+) engine=Innodb default charset=utf8;
+ 
 
 CREATE TABLE padmon(
 id_padmon int(10) not null,
@@ -54,10 +66,6 @@ codigo_postal varchar(5)not null,
 permisos varchar (3) not null default 003,
 fecha_registro  datetime not null default current_timestamp
  ) engine=Innodb default charset=utf8;
-
-alter table alumnos
-change column id_alumno id_alumno int(10) not null auto_increment,
-add primary key (id_alumno);
 
 alter table padmon
 change column id_padmon id_padmon int(10) not null auto_increment,
